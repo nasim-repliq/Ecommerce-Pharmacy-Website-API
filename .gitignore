@@ -11,3 +11,6 @@ env/
 # Logs and temp files
 *.log
 *.tmp
+
+# Database
+db.sqlite3
