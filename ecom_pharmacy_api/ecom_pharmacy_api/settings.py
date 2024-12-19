@@ -43,7 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'api', 
+    'core', 
+    'account',
+    'product', 
+    'inventory',
+    'order',
+    
 
     'rest_framework',
     'rest_framework_simplejwt',
@@ -133,7 +138,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'api.Person' 
+AUTH_USER_MODEL = 'core.Person' 
 
 
 REST_FRAMEWORK = {
@@ -149,3 +154,6 @@ REST_FRAMEWORK = {
 }
 
 
+# Media files configuration
+MEDIA_URL = '/media/'  # URL to access media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory to store uploaded files
